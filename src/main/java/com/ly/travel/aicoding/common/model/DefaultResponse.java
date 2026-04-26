@@ -1,4 +1,4 @@
-package com.ly.travel.aicoding.sample.api.response;
+package com.ly.travel.aicoding.common.model;
 
 /**
  * 默认响应DTO

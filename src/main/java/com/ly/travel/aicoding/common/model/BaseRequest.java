@@ -1,4 +1,4 @@
-package com.ly.travel.aicoding.sample.api.request;
+package com.ly.travel.aicoding.common.model;
 
 import lombok.Getter;
 import lombok.Setter;
