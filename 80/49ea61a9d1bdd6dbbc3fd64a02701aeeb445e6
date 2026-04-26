@@ -1,0 +1,60 @@
+src/main/java/com/ly/travel/aicoding/sample/api/request/SysUserStatusRequest.java
+  h_df73f562627f76 1-19
+src/main/java/com/ly/travel/aicoding/sample/api/request/SysUserQueryRequest.java
+  h_df73f562627f76 10,20-32
+src/main/java/com/ly/travel/aicoding/sample/api/model/SysUserDTO.java
+  h_df73f562627f76 1-18
+src/main/java/com/ly/travel/aicoding/common/model/PageResponse.java
+  h_df73f562627f76 17
+src/main/java/com/ly/travel/aicoding/common/model/PageRequest.java
+  h_df73f562627f76 3-6,8,14-16
+src/main/java/com/ly/travel/aicoding/sample/api/request/SysUserRemoveRequest.java
+  h_df73f562627f76 1-25
+src/main/java/com/ly/travel/aicoding/sample/api/request/SysUserModifyRequest.java
+  607a50d02f2eeced 9
+  h_df73f562627f76 4-6,15-17
+src/main/java/com/ly/travel/aicoding/sample/api/request/SysUserSaveRequest.java
+  607a50d02f2eeced 10
+  h_df73f562627f76 4-6,16-18
+src/main/java/com/ly/travel/aicoding/sample/api/request/SysUserCreateRequest.java
+  h_df73f562627f76 5-6,10-11,17
+  607a50d02f2eeced 9,16
+src/main/java/com/ly/travel/aicoding/sample/api/controller/SysUserOpenapiController.java
+  h_df73f562627f76 1-37
+src/main/java/com/ly/travel/aicoding/sample/api/request/SysUserDetailRequest.java
+  h_df73f562627f76 4,20,22,24
+  607a50d02f2eeced 21
+src/main/java/com/ly/travel/aicoding/sample/api/controller/AbstractController.java
+  h_df73f562627f76 4-6,8-10,19-35,37-43,46-81
+  607a50d02f2eeced 44-45,82-83
+src/main/java/com/ly/travel/aicoding/sample/api/controller/SysUserManageController.java
+  607a50d02f2eeced 15,22,54
+  h_df73f562627f76 3-4,6-7,9-12,14,20-21,23,27-28,31-36,38-45,47,51-52,55,61,66-77,79-91
+src/main/java/com/ly/travel/aicoding/sample/api/request/SysUserPageRequest.java
+  h_df73f562627f76 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "8049ea61a9d1bdd6dbbc3fd64a02701aeeb445e6",
+  "prompts": {
+    "607a50d02f2eeced": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1777188857415",
+        "model": "unknown"
+      },
+      "human_author": "peng2.peng",
+      "messages": [],
+      "total_additions": 20,
+      "total_deletions": 21,
+      "accepted_lines": 12,
+      "overriden_lines": 10
+    }
+  },
+  "humans": {
+    "h_df73f562627f76": {
+      "author": "peng2.peng"
+    }
+  }
+}
