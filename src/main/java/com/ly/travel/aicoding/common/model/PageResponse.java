@@ -14,6 +14,6 @@ public class PageResponse<T> extends DefaultResponse<List<T>> {
     /**
      * 总记录数
      */
-    private long totalCount;
+    private long total;
 
 }
