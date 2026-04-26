@@ -1,0 +1,60 @@
+src/main/java/com/ly/travel/aicoding/sample/domain/service/SysUserService.java
+  h_df73f562627f76 3-4,9-10,16
+  607a50d02f2eeced 8
+src/main/java/com/ly/travel/aicoding/sample/domain/model/SysUserDO.java
+  h_df73f562627f76 8,21,23,25,27,29,33,36-50
+src/main/java/com/ly/travel/aicoding/common/util/JsonUtils.java
+  h_df73f562627f76 1-461
+src/main/java/com/ly/travel/aicoding/sample/mapping/SysUserMapping.java
+  h_df73f562627f76 1-20
+src/main/java/com/ly/travel/aicoding/common/support/DateRelatedMapper.java
+  h_df73f562627f76 1-62
+src/main/java/com/ly/travel/aicoding/sample/domain/model/SysUserQuery.java
+  h_df73f562627f76 1-18
+src/main/java/com/ly/travel/aicoding/sample/biz/context/package-info.java
+  h_df73f562627f76 1-7
+src/main/java/com/ly/travel/aicoding/common/util/DateTimeUtils.java
+  h_df73f562627f76 1-582
+src/main/java/com/ly/travel/aicoding/common/support/AbstractManageService.java
+  607a50d02f2eeced 15
+  h_df73f562627f76 3-4
+src/main/java/com/ly/travel/aicoding/common/consts/CommonConstants.java
+  h_df73f562627f76 1-14
+src/main/java/com/ly/travel/aicoding/sample/dal/typehandler/package-info.java
+  h_df73f562627f76 1-7
+src/main/java/com/ly/travel/aicoding/sample/biz/service/impl/SysUserManageServiceImpl.java
+  h_df73f562627f76 1-16
+src/main/java/com/ly/travel/aicoding/sample/biz/service/SysUserManageService.java
+  h_df73f562627f76 1-11
+src/main/java/com/ly/travel/aicoding/sample/dal/mapper/package-info.java
+  h_df73f562627f76 1-7
+src/main/java/com/ly/travel/aicoding/sample/biz/model/package-info.java
+  h_df73f562627f76 1-7
+src/main/java/com/ly/travel/aicoding/sample/config/MybatisConfiguration.java
+  h_df73f562627f76 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "42d83ece9e7ae0f0f65e57f4deec9a5f2d5fb1ff",
+  "prompts": {
+    "607a50d02f2eeced": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1777188857415",
+        "model": "unknown"
+      },
+      "human_author": "peng2.peng",
+      "messages": [],
+      "total_additions": 3,
+      "total_deletions": 3,
+      "accepted_lines": 2,
+      "overriden_lines": 2
+    }
+  },
+  "humans": {
+    "h_df73f562627f76": {
+      "author": "peng2.peng"
+    }
+  }
+}
