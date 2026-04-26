@@ -1,0 +1,14 @@
+.gitignore
+  h_df73f562627f76 1,15,17-18,20-21,23-28,33-34,37,39-46,48-51,53-55,57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "9fa32eb52d20b184cf9304dd4cbe5341a28c407c",
+  "prompts": {},
+  "humans": {
+    "h_df73f562627f76": {
+      "author": "peng2.peng"
+    }
+  }
+}
