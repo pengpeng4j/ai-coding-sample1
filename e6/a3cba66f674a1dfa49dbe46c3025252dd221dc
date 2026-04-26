@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "e6a3cba66f674a1dfa49dbe46c3025252dd221dc",
+  "prompts": {},
+  "humans": {
+    "h_df73f562627f76": {
+      "author": "peng2.peng"
+    }
+  }
+}
