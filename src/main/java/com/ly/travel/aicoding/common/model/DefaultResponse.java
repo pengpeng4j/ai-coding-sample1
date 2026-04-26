@@ -9,21 +9,70 @@ package com.ly.travel.aicoding.common.model;
  */
 public class DefaultResponse<T> {
 
-    /**
-     * 是否成功
-     */
-    private boolean success;
-    /**
-     * 响应代码(同HTTP状态码)
-     */
-    private String code;
-    /**
-     * 响应消息
-     */
-    private String message;
-    /**
-     * 响应数据
-     */
-    private T data;
+    protected boolean success;
+    protected String code;
+    protected String message;
+    protected T data;
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public static <T> Builder<T> ok(T data) {
+        Builder<T> builder = new Builder<>(true);
+        return builder.data(data);
+    }
+
+    public static <T> Builder<T> error(String code, String message) {
+        Builder<T> builder = new Builder<>(false);
+        return builder.code(code).message(message);
+    }
+
+    public static class Builder<T> {
+        private boolean success;
+        private String code = "200";
+        private String message;
+        private T data;
+
+        Builder(boolean success) {
+            this.success = success;
+        }
+
+        public Builder<T> code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        public Builder<T> message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        public Builder<T> data(T data) {
+            this.data = data;
+            return this;
+        }
+
+        public DefaultResponse<T> build() {
+            DefaultResponse<T> response = new DefaultResponse<>();
+            response.success = this.success;
+            response.code = this.code;
+            response.message = this.message;
+            response.data = this.data;
+            return response;
+        }
+    }
 
 }

@@ -4,8 +4,9 @@ import com.ly.travel.aicoding.common.model.DefaultResponse;
 import com.ly.travel.aicoding.common.model.PageResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -18,67 +19,45 @@ import java.util.List;
 public abstract class AbstractController {
 
     protected <T> DefaultResponse<T> defaultResponse(String code, String message) {
-        return defaultResponse(false, code, message, null);
+        return DefaultResponse.<T>error(code, message).build();
     }
 
     protected <T> DefaultResponse<T> defaultResponse(T data) {
-        //TODO
-        return null;
+        return DefaultResponse.ok(data).build();
     }
 
     protected <T> DefaultResponse<T> defaultResponse(boolean success, String code, String message, T data) {
-        //TODO
-        return null;
+        if (success) {
+            return DefaultResponse.<T>ok(data).build();
+        }
+        DefaultResponse.Builder<T> builder = DefaultResponse.error(code, message);
+        return builder.build();
     }
 
     protected <T> PageResponse<T> pageResponse(String code, String message) {
-        return pageResponse(false, code, message, Collections.emptyList(), 0);
+        return PageResponse.<T>pageError(code, message).build();
     }
 
     protected <T> PageResponse<T> pageResponse(List<T> dataList, long total) {
-        //TODO
-        return null;
+        return PageResponse.<T>ok(dataList, total).build();
     }
 
     protected <T> PageResponse<T> pageResponse(boolean success, String code, String message, List<T> data, long total) {
-        //TODO
-        return null;
-    }
-
-    @SuppressWarnings("unchecked")
-    protected <T> T getRequestAttribute(HttpServletRequest request, String key) {
-        return (T) request.getAttribute(key);
-    }
-
-    @SuppressWarnings("unchecked")
-    protected <T> T getSessionAttribute(HttpServletRequest request, String key) {
-        return (T) request.getSession().getAttribute(key);
-    }
-
-    protected void setRequestAttribute(HttpServletRequest request, String key, Object value) {
-        request.setAttribute(key, value);
-    }
-
-    protected void setSessionAttribute(HttpServletRequest request, String key, Object value) {
-        request.getSession().setAttribute(key, value);
-    }
-
-    protected void removeRequestAttribute(HttpServletRequest request, String key) {
-        request.removeAttribute(key);
-    }
-
-    protected void removeSessionAttribute(HttpServletRequest request, String key) {
-        request.getSession().removeAttribute(key);
+        if (success) {
+            return PageResponse.<T>ok(data, total).build();
+        }
+        PageResponse.Builder<T> builder = PageResponse.pageError(code, message);
+        return builder.build();
     }
 
     protected HttpServletRequest getCurrentRequest() {
-        //TODO
-        return null;
+        ServletRequestAttributes attrs = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        return attrs != null ? attrs.getRequest() : null;
     }
 
     protected HttpServletResponse getCurrentResponse() {
-        //TODO
-        return null;
+        ServletRequestAttributes attrs = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        return attrs != null ? attrs.getResponse() : null;
     }
 
 }

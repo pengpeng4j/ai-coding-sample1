@@ -16,4 +16,11 @@ import lombok.ToString;
 @Setter
 @ToString
 public class SysUserPageRequest extends PageRequest {
+
+    private String userName;
+
+    private Integer userType;
+
+    private Integer userStatus;
+
 }

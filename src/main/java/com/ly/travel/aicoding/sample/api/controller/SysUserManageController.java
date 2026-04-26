@@ -4,6 +4,8 @@ import com.ly.travel.aicoding.common.model.DefaultResponse;
 import com.ly.travel.aicoding.common.model.PageResponse;
 import com.ly.travel.aicoding.sample.api.model.SysUserDTO;
 import com.ly.travel.aicoding.sample.api.request.*;
+import com.ly.travel.aicoding.sample.biz.service.SysUserManageService;
+import jakarta.annotation.Resource;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,76 +23,55 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/manage/sysuser")
 public class SysUserManageController extends AbstractController {
 
+    @Resource
+    private SysUserManageService sysUserManageService;
+
     /**
      * 创建系统用户
-     *
-     * @param request 请求参数
-     * @return 响应参数
      */
     @PostMapping("/createUser")
     public DefaultResponse<SysUserDTO> createUser(@RequestBody @Validated SysUserCreateRequest request) {
-        //TODO
-        return null;
+        return defaultResponse(sysUserManageService.createUser(request));
     }
 
     /**
      * 根据ID修改用户信息
-     *
-     * @param request 请求参数
-     * @return 响应参数
      */
     @PostMapping("/modifyUserById")
     public DefaultResponse<SysUserDTO> modifyUserById(@RequestBody @Validated SysUserModifyRequest request) {
-        //TODO
-        return null;
+        return defaultResponse(sysUserManageService.modifyUserById(request));
     }
 
     /**
      * 根据ID修改用户状态
-     *
-     * @param request 请求参数
-     * @return 响应参数
      */
     @PostMapping("/changeStatusById")
     public DefaultResponse<Boolean> changeStatusById(@RequestBody @Validated SysUserStatusRequest request) {
-        //TODO
-        return null;
+        return defaultResponse(sysUserManageService.changeStatusById(request));
     }
 
     /**
      * 根据ID删除用户信息
-     *
-     * @param request 请求参数
-     * @return 响应参数
      */
     @PostMapping("/removeUserById")
     public DefaultResponse<Boolean> removeUserById(@RequestBody @Validated SysUserRemoveRequest request) {
-        //TODO
-        return null;
+        return defaultResponse(sysUserManageService.removeUserById(request));
     }
 
     /**
      * 根据ID查询用户详情
-     *
-     * @param request 请求参数
-     * @return 响应参数
      */
     @PostMapping("/queryUserById")
     public DefaultResponse<SysUserDTO> queryUserById(@RequestBody @Validated SysUserDetailRequest request) {
-        //TODO
-        return null;
+        return defaultResponse(sysUserManageService.queryUserById(request));
     }
 
     /**
      * 分页查询用户列表
-     *
-     * @param request 请求参数
-     * @return 响应参数
      */
     @PostMapping("/queryUserByPage")
     public PageResponse<SysUserDTO> queryUserByPage(@RequestBody @Validated SysUserPageRequest request) {
-        //TODO
-        return null;
+        return sysUserManageService.queryUserByPage(request);
     }
 
 }

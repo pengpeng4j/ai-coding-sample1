@@ -1,5 +1,8 @@
 package com.ly.travel.aicoding.sample.biz.service;
 
+import com.ly.travel.aicoding.sample.api.model.SysUserDTO;
+import com.ly.travel.aicoding.sample.api.request.*;
+
 /**
  * 系统用户管理服务
  *
@@ -8,4 +11,17 @@ package com.ly.travel.aicoding.sample.biz.service;
  * @date 2026/4/26 16:59
  */
 public interface SysUserManageService {
+
+    SysUserDTO createUser(SysUserCreateRequest request);
+
+    SysUserDTO modifyUserById(SysUserModifyRequest request);
+
+    Boolean changeStatusById(SysUserStatusRequest request);
+
+    Boolean removeUserById(SysUserRemoveRequest request);
+
+    SysUserDTO queryUserById(SysUserDetailRequest request);
+
+    com.ly.travel.aicoding.common.model.PageResponse<SysUserDTO> queryUserByPage(SysUserPageRequest request);
+
 }
