@@ -1,0 +1,24 @@
+src/main/java/com/ly/travel/aicoding/sample/api/request/package-info.java
+  h_df73f562627f76 1-7
+src/main/java/com/ly/travel/aicoding/common/model/PageResponse.java
+  h_df73f562627f76 1-19
+src/main/java/com/ly/travel/aicoding/common/model/DefaultResponse.java
+  h_df73f562627f76 1-29
+src/main/java/com/ly/travel/aicoding/sample/api/controller/package-info.java
+  h_df73f562627f76 1-7
+src/main/java/com/ly/travel/aicoding/common/model/BaseRequest.java
+  h_df73f562627f76 1-24
+src/main/java/com/ly/travel/aicoding/sample/api/response/package-info.java
+  h_df73f562627f76 1-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "a67c9be53ed818d74674b4b081efaba3a309c88c",
+  "prompts": {},
+  "humans": {
+    "h_df73f562627f76": {
+      "author": "peng2.peng"
+    }
+  }
+}
