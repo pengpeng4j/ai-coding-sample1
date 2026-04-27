@@ -1,0 +1,50 @@
+openspec/specs/manage-api/spec.md
+  b47d66ebdbed54a2 1-27
+src/main/java/com/ly/travel/aicoding/sample/api/controller/SysUserManageController.java
+  a2adbe19d07c169b 3,73-75
+src/main/java/com/ly/travel/aicoding/sample/api/request/SysUserModifyRequest.java
+  a2adbe19d07c169b 4,25
+src/main/java/com/ly/travel/aicoding/sample/api/controller/SysUserOpenapiController.java
+  a2adbe19d07c169b 33
+src/main/java/com/ly/travel/aicoding/sample/biz/service/SysUserManageService.java
+  a2adbe19d07c169b 3,26
+src/main/java/com/ly/travel/aicoding/sample/api/request/SysUserStatusRequest.java
+  a2adbe19d07c169b 4,26
+openspec/specs/sys-user/spec.md
+  b47d66ebdbed54a2 1-130
+src/main/java/com/ly/travel/aicoding/sample/biz/service/impl/SysUserManageServiceImpl.java
+  a2adbe19d07c169b 98-99,131,136-138
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "e816aad410e7ecd6d058bf6c09496035922c1048",
+  "prompts": {
+    "a2adbe19d07c169b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7041cd44-ec82-41ac-877b-7a2dbc1ff369",
+        "model": "qwen3.6-plus"
+      },
+      "human_author": "peng2.peng",
+      "messages": [],
+      "total_additions": 18,
+      "total_deletions": 17,
+      "accepted_lines": 17,
+      "overriden_lines": 0
+    },
+    "b47d66ebdbed54a2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3d1e6467-2a70-4fda-a85c-973e4cb993a1",
+        "model": "qwen3.6-plus"
+      },
+      "human_author": "peng2.peng",
+      "messages": [],
+      "total_additions": 157,
+      "total_deletions": 0,
+      "accepted_lines": 157,
+      "overriden_lines": 0
+    }
+  }
+}
