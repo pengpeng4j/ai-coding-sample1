@@ -1,5 +1,6 @@
 package com.ly.travel.aicoding.sample.biz.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ly.travel.aicoding.sample.api.model.SysUserDTO;
 import com.ly.travel.aicoding.sample.api.request.*;
 
@@ -22,6 +23,6 @@ public interface SysUserManageService {
 
     SysUserDTO queryUserById(SysUserDetailRequest request);
 
-    com.ly.travel.aicoding.common.model.PageResponse<SysUserDTO> queryUserByPage(SysUserPageRequest request);
+    Page<SysUserDTO> queryUserByPage(SysUserPageRequest request);
 
 }

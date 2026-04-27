@@ -30,8 +30,7 @@ public class SysUserOpenapiController extends AbstractController {
      */
     @PostMapping("/queryUsersByCondition")
     public DefaultResponse<List<SysUserDTO>> queryUsersByCondition(@RequestBody @Validated SysUserQueryRequest request) {
-        //TODO
-        return null;
+        return defaultResponse("501", "接口暂未实现");
     }
 
 }

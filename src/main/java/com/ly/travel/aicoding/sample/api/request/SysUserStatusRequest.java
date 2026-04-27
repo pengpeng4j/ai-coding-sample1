@@ -1,6 +1,7 @@
 package com.ly.travel.aicoding.sample.api.request;
 
 import com.ly.travel.aicoding.common.model.BaseRequest;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,6 +23,7 @@ public class SysUserStatusRequest extends BaseRequest {
     private Long id;
 
     @NotNull(message = "用户状态不能为空")
+    @Max(value = 1, message = "状态值非法")
     private Integer userStatus;
 
 }

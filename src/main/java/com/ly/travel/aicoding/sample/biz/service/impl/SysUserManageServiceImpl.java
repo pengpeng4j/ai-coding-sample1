@@ -1,7 +1,6 @@
 package com.ly.travel.aicoding.sample.biz.service.impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.ly.travel.aicoding.common.model.PageResponse;
 import com.ly.travel.aicoding.common.support.AbstractManageService;
 import com.ly.travel.aicoding.sample.api.model.SysUserDTO;
 import com.ly.travel.aicoding.sample.api.request.*;
@@ -96,8 +95,8 @@ public class SysUserManageServiceImpl extends AbstractManageService implements S
         if (user == null) {
             throw new IllegalArgumentException("用户不存在");
         }
-        if (request.getUserStatus() < 0 || request.getUserStatus() > 2) {
-            throw new IllegalArgumentException("状态值非法");
+        if (request.getUserStatus() < 0) {
+            throw new IllegalArgumentException("状态值不能为负数");
         }
         sysUserService.changeUserStatusById(request.getId(), request.getUserStatus());
         return true;
@@ -129,12 +128,14 @@ public class SysUserManageServiceImpl extends AbstractManageService implements S
     }
 
     @Override
-    public PageResponse<SysUserDTO> queryUserByPage(SysUserPageRequest request) {
+    public Page<SysUserDTO> queryUserByPage(SysUserPageRequest request) {
         SysUserQuery query = sysUserMapping.toQuery(request);
         Page<SysUserDO> page = new Page<>(request.getPageNum(), request.getPageSize());
 
         Page<SysUserDO> result = sysUserService.selectUserByPage(query, page);
-        return PageResponse.ok(result.getRecords().stream().map(sysUserMapping::toDTO).toList(), result.getTotal()).build();
+        Page<SysUserDTO> dtoPage = new Page<>(result.getCurrent(), result.getSize(), result.getTotal());
+        dtoPage.setRecords(result.getRecords().stream().map(sysUserMapping::toDTO).toList());
+        return dtoPage;
     }
 
 }

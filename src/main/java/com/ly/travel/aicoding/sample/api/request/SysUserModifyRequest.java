@@ -1,6 +1,7 @@
 package com.ly.travel.aicoding.sample.api.request;
 
 import com.ly.travel.aicoding.common.model.BaseRequest;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,6 +22,7 @@ public class SysUserModifyRequest extends BaseRequest {
     @NotNull(message = "用户ID不能为空")
     private Long id;
 
+    @NotBlank(message = "用户名不能为空")
     private String userName;
 
     private String userPhone;

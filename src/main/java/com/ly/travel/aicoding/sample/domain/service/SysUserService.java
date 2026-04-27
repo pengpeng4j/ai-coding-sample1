@@ -6,7 +6,6 @@ import com.ly.travel.aicoding.sample.dal.mapper.SysUserMapper;
 import com.ly.travel.aicoding.sample.domain.model.SysUserDO;
 import com.ly.travel.aicoding.sample.domain.model.SysUserQuery;
 import jakarta.annotation.Resource;
-import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
@@ -59,7 +58,6 @@ public class SysUserService {
             wrapper.eq(StringUtils.isNotBlank(query.getUserName()), SysUserDO::getUserName, query.getUserName());
             wrapper.eq(Objects.nonNull(query.getUserType()), SysUserDO::getUserType, query.getUserType());
             wrapper.eq(Objects.nonNull(query.getUserStatus()), SysUserDO::getUserStatus, query.getUserStatus());
-            wrapper.in(CollectionUtils.isNotEmpty(query.getUserStatuses()), SysUserDO::getUserStatus, query.getUserStatuses());
         }
 
         wrapper.orderByDesc(SysUserDO::getCreateTime);
