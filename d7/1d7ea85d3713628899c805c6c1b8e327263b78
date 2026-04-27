@@ -1,0 +1,14 @@
+src/main/java/com/ly/travel/aicoding/sample/api/controller/SysUserManageController.java
+  h_df73f562627f76 5,74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "d71d7ea85d3713628899c805c6c1b8e327263b78",
+  "prompts": {},
+  "humans": {
+    "h_df73f562627f76": {
+      "author": "peng2.peng"
+    }
+  }
+}
