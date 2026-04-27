@@ -2,6 +2,7 @@ package com.ly.travel.aicoding.sample.api.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ly.travel.aicoding.common.model.DefaultResponse;
+import com.ly.travel.aicoding.common.model.PageResponse;
 import com.ly.travel.aicoding.sample.api.model.SysUserDTO;
 import com.ly.travel.aicoding.sample.api.request.*;
 import com.ly.travel.aicoding.sample.biz.service.SysUserManageService;
@@ -70,7 +71,7 @@ public class SysUserManageController extends AbstractController {
      * 分页查询用户列表
      */
     @PostMapping("/queryUserByPage")
-    public DefaultResponse<Page<SysUserDTO>> queryUserByPage(@RequestBody @Validated SysUserPageRequest request) {
+    public PageResponse<SysUserDTO> queryUsersByPage(@RequestBody @Validated SysUserPageRequest request) {
         Page<SysUserDTO> page = sysUserManageService.queryUserByPage(request);
         return pageResponse(page.getRecords(), page.getTotal());
     }
